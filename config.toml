@@ -1,0 +1,17 @@
+[location]
+latitude         = 52.52
+longitude        = 13.41
+timezone         = "Europe/Berlin"
+name             = "Berlin"
+
+[brightness]
+day              = 95
+night            = 5
+
+[transition]
+# Total window centred on sunrise/sunset, split half before and half after.
+# 60 minutes → ramp from 30 min before to 30 min after each event.
+duration_minutes = 60
+
+[schedule]
+check_interval_seconds = 60

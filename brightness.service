@@ -1,0 +1,14 @@
+[Unit]
+Description=Monitor brightness control (sunrise/sunset)
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/brightness \
+    -config %h/.config/brightness-control/config.toml
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=graphical-session.target
